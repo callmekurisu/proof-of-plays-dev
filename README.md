@@ -1,6 +1,8 @@
 # proof-of-plays
 micropayment powered music platform
 
+clone, npm install, npm run dev, you know the drill..
+
 #Todos
 - Searching
 - Top plays track -> 1st spot
