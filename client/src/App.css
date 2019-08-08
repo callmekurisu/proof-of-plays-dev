@@ -1,0 +1,74 @@
+body {
+  background: #2dd6ec; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #fc881b, #eba350);
+  background: -webkit-linear-gradient(right, #fc881b, #eec48d);
+  background: -moz-linear-gradient(right, #fc881b, #e6c492);
+  background: -o-linear-gradient(right, #fc881b, #ecca80);
+  background: linear-gradient(to left, #e9974a, #e1e7e7);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+.invoice {
+  display: block;
+  margin: auto;
+  overflow-wrap: break-word;
+}
+
+.upload-form {
+  padding: 10px;
+}
+
+.player {
+  padding: 10px;
+}
+
+.node-info {
+  font-size: 16px;
+  padding: 10px;
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+.clipboard {
+  width: 25px;
+  padding: 10x;
+}
+
+.paid {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.identicon {
+  padding: 5px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+}
+
+.tutorial {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.player {
+  display: block;
+  margin: auto;
+}
+
+.media {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.joule {
+  padding: 10px;
+  width: 50px;
+}
