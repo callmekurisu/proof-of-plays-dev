@@ -36,7 +36,7 @@ MongoClient.connect('mongodb://localhost/trackDB-dev',
   { useNewUrlParser: true }, (err, client) => {
     if (err) {
       console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
-      process.exit(1);
+      process.exit(0);
     }
     db = client.db('trackDB-dev');
   });
