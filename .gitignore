@@ -12,8 +12,7 @@ build/
 .directory
 yarn.lock
 
-#secret
-config/keys.js
+#secrets
 csr.pem
 key.pem
 server.crt
