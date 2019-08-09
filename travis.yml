@@ -1,8 +1,10 @@
 language: node_js
 before_script:
-  - npm install | cd client && yarn install | cd ..
+  - cd client && npm install
+  - npm audit fix
+  - cd ..
 node_js:
   - "11"
 script:
-  - npm run dev
+  - npm run pretest
 

@@ -5,10 +5,11 @@
    Create database owner with
    > db.createUser({user: "user" , pwd: "password", roles: [  "dbOwner" ]})
 */
+'use strict';
 
 module.exports = {
-    mongoURI:
+  mongoURI:
     'mongodb://user:user@localhost:27017/plays-dev',
-    superSecret: 'secret',
-    DEV_CLIENT: "http://localhost:3000"
-  }
+  superSecret: 'secret',
+  DEV_CLIENT: 'http://localhost:3000'
+};

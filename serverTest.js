@@ -37,3 +37,6 @@ app.use('/api/lnd', lnd);
 const port = 7777;
 app.listen(port, '0.0.0.0', () => console.log(`Port ${port} is online`));
 
+setTimeout(() => {
+  process.exit(0)
+}, 3000)

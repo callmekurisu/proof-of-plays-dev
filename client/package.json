@@ -19,6 +19,7 @@
     "moment": "^2.23.0",
     "nocache": "^2.1.0",
     "popper.js": "^1.15.0",
+    "prettier": "^1.18.2",
     "qrcode.react": "^0.9.3",
     "react": "^16.8.6",
     "react-copy-to-clipboard": "^5.0.1",
@@ -39,17 +40,19 @@
   "proxy": "http://localhost:7777/",
   "scripts": {
     "start": "react-scripts start",
+    "pretest": "eslint --ignore-path .gitignore .",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-strongloop": "^2.1.0"
+  }
 }
