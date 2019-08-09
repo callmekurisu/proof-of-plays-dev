@@ -3,7 +3,7 @@
    Create and switch to new database
    > use "db name"
    Create database owner with
-   > db.createUser({user: "user" , pwd: "kurisu", roles: [  "dbOwner" ]})
+   > db.createUser({user: "user" , pwd: "password", roles: [  "dbOwner" ]})
 */
 
 module.exports = {
