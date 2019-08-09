@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const admin = require("../../config/keys");
 const bcrypt = require("bcryptjs");
 const cors = require("cors");
+const path = require('path');
 // Use LND API for sending payment
 const grpc = require('grpc');
 const fs = require("fs");
@@ -18,10 +19,12 @@ process.env.GRPC_SSL_CIPHER_SUITES = 'HIGH+ECDSA'
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 //  Lnd cert is at ~/.lnd/tls.cert on Linux and
 //  ~/Library/Application Support/Lnd/tls.cert on Mac
-const lndCert = fs.readFileSync("../../config/tls.cert");
+const tlsPath = path.join(__dirname, '..', '..', 'config', 'tls.cert');
+const macaroonPath = path.join(__dirname, '..', '..', 'config', 'admin.macaroon');
+const lndCert = fs.readFileSync(tlsPath);
 const sslCreds = grpc.credentials.createSsl(lndCert);
 const macaroonCreds = grpc.credentials.createFromMetadataGenerator(function(args, callback) {
-    const macaroon = fs.readFileSync("../../config/admin.macaroon").toString('hex');
+    const macaroon = fs.readFileSync(macaroonPath).toString('hex');
     const metadata = new grpc.Metadata()
     metadata.add('macaroon', macaroon);
     callback(null, metadata);

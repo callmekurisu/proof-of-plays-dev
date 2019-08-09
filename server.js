@@ -23,10 +23,10 @@ app.use(bodyParser.json());
 const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
-mongoose
-  .connect(db, { useNewUrlParser: true })
-  .then(() => console.log('Mongoose Connected'))
-  .catch(err => console.log(err));
+// mongoose
+//   .connect(db, { useNewUrlParser: true })
+//   .then(() => console.log('Mongoose Connected'))
+//   .catch(err => console.log(err));
 
 // Routes
 app.use('/api/meta', meta);
